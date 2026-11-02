@@ -13,6 +13,7 @@ import tkinter as tk
 from tkinter import ttk
 # Using this to display images
 from PIL import Image, ImageTk
+from AddReviews import open_review_form
 
 
 def display(event):
@@ -46,7 +47,7 @@ def displayRestaurants():
         reviewLabel = tk.Label(restaurantFrame, text="Review: Nice Restaurant!", bg="light grey", fg="black")
         addressLabel = tk.Label(restaurantFrame, text="Address: 123 Street", bg="light grey", fg="black")
         cuisineLabel = tk.Label(restaurantFrame, text="Cuisine: Indian", bg="light grey", fg="black")
-        addButton = tk.Button(restaurantFrame, text="add review", bg="light grey")
+        addButton = tk.Button(restaurantFrame, text="add review", bg="light grey", command=lambda: open_review_form(mainWindow, "Restaurant"))
         deleteButton = tk.Button(restaurantFrame, text="delete review", bg="light grey")
         editButton = tk.Button(restaurantFrame, text="edit review", bg="light grey")
         imageLabel = tk.Label(restaurantFrame, image=ImagePR)
@@ -68,7 +69,7 @@ def displayMovies():
         reviewLabel = tk.Label(movieFrame, text="Review: Nice Movie!", bg="light grey", fg="black")
         filmLengthLabel = tk.Label(movieFrame, text="Length: 2 hrs 10 min", bg="light grey", fg="black")
         genreLabel = tk.Label(movieFrame, text="Genre: action", bg="light grey", fg="black")
-        addButton = tk.Button(movieFrame, text="add review", bg="light grey")
+        addButton = tk.Button(movieFrame, text="add review", bg="light grey", command=lambda: open_review_form(mainWindow, "Movie"))
         deleteButton = tk.Button(movieFrame, text="delete review", bg="light grey")
         editButton = tk.Button(movieFrame, text="edit review", bg="light grey")
         imageLabel = tk.Label(movieFrame, image=ImagePM)
@@ -90,7 +91,7 @@ def displayTVShows():
         reviewLabel = tk.Label( tvFrame, text="Review: Nice Show!", bg="light grey", fg="black")
         numberOfEpisodesLabel = tk.Label(tvFrame, text="NumberEps: 10", bg="light grey", fg="black")
         genreLabel = tk.Label( tvFrame, text="Genre: action", bg="light grey", fg="black")
-        addButton = tk.Button( tvFrame, text="add review", bg="light grey")
+        addButton = tk.Button( tvFrame, text="add review", bg="light grey", command=lambda: open_review_form(mainWindow, "TV show"))
         deleteButton = tk.Button(tvFrame, text="delete review", bg="light grey")
         editButton = tk.Button( tvFrame, text="edit review", bg="light grey")
         imageLabel = tk.Label( tvFrame, image=ImagePT)
